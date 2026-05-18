@@ -11,10 +11,13 @@ struct HomeView: View {
 
     @StateObject private var viewModel = WeatherDataViewModel()
 
+    /// The root body of `HomeView`.
+    /// Wraps `content` inside a `NavigationView` with the title "My Weather Data"
+    /// and kicks off an async weather-load task on first appearance.
     var body: some View {
         NavigationView {
             content
-                .navigationTitle("Weather data")
+                .navigationTitle("My Weather Data")
         }
         .task {
             await viewModel.loadWeather()
