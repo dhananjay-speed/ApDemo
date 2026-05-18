@@ -11,10 +11,12 @@ struct HomeView: View {
 
     @StateObject private var viewModel = WeatherDataViewModel()
 
+    /// The root body of the view, wrapping content in a `NavigationView`
+    /// and setting the navigation bar title to "My Weather Data".
     var body: some View {
         NavigationView {
             content
-                .navigationTitle("Weather data")
+                .navigationTitle("My Weather Data")
         }
         .task {
             await viewModel.loadWeather()
