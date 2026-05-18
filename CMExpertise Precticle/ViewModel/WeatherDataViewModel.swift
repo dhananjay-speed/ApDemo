@@ -43,7 +43,7 @@ final class WeatherDataViewModel: ObservableObject {
     private func group(_ response: WeatherResModel?) -> [WeatherDay] {
         var buckets: [(date: String, items: [WeatherListItem])] = []
         for item in response?.list ?? [] {
-            let date = item.dtTxt?.getDate() ?? ""
+            let date = item.dtTxt?.getDateWithRelativeLabel() ?? ""
             if let index = buckets.firstIndex(where: { $0.date == date }) {
                 buckets[index].items.append(item)
             } else {
