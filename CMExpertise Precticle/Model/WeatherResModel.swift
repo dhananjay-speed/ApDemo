@@ -16,8 +16,6 @@ class WeatherResModel: Decodable {
     private enum CodingKeys: String, CodingKey {
         case cod = "cod"
         case message = "message"
-        case test = "test"
-        case tst = "tst"
         case list = "list"
     }
 
