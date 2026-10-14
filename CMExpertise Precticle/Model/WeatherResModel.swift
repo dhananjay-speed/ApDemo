@@ -17,7 +17,7 @@ class WeatherResModel: Decodable {
         case cod = "cod"
         case message = "message"
         case test = "test"
-        case cnt = "cnt"
+        case tst = "tst"
         case list = "list"
     }
 
